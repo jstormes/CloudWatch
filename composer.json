@@ -1,0 +1,25 @@
+{
+    "name": "jstormes/cloud-watch",
+    "description": "A very light weight wrapper around AWS CloudWatch as a PHP composer package.",
+    "type": "library",
+    "require": {
+        "aws/aws-sdk-php": "^3.173"
+    },
+    "license": "GPL v3.0",
+    "authors": [
+        {
+            "name": "James Stormes",
+            "email": "jstormes@stormes.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "JStormes\\CloudWatch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JStormes\\CloudWatch\\Test\\": "test/src/"
+        }
+    }
+}
