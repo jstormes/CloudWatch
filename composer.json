@@ -3,7 +3,8 @@
     "description": "A very light weight wrapper around AWS CloudWatch as a PHP composer package.",
     "type": "library",
     "require": {
-        "aws/aws-sdk-php": "^3.173"
+        "aws/aws-sdk-php": "^3.173",
+        "ext-json": "*"
     },
     "license": "GPL v3.0",
     "authors": [
@@ -14,12 +15,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "JStormes\\CloudWatch\\": "src/"
+            "JStormes\\AWSwrapper\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "JStormes\\CloudWatch\\Test\\": "test/src/"
+            "JStormes\\AWSwrapper\\Test\\": "test/src/"
         }
     }
 }

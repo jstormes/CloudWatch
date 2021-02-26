@@ -7,13 +7,28 @@
  * Time: 2:57 PM
  */
 
-declare(strict_types=1);
 
-namespace JStormes\CloudWatch;
+namespace JStormes\AWSwrapper;
 
-use Aws\CloudWatchLogs\CloudWatchLogsClient;
 
 class CloudWatch
 {
+    private $config;
+
+    function __construct($config) {
+
+        $this->config= $config;
+
+    }
+
+    // LazyLoad Singleton for Logs
+    function  log() : Logs {
+
+        if (!isset($this->logs)) {
+            $this->logs = new Logs($this->config);
+        }
+
+        return $this->logs;
+    }
 
 }
